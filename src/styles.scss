@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: azure;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    input, .enterBtn, button {
+            border: 1.1px solid #ffffff;
+            border-radius: 4px;
+            outline: none;
+            background-color: rgb(100, 100, 227);
+            color: #ffffff;
+            padding: 4px 6px;
+            transition: .7s ease;
+            cursor: pointer;
+            &::placeholder {
+                color: navy;
+            }
+            &:hover {
+                background-color: #ffffff;
+                border: 1.1px solid navy;
+                color: navy;
+            }
+            &:hover::placeholder{
+                color: navy;
+            }
+        }
+    input.red {
+        border: 2px solid red;
+        background-color: rgb(212, 119, 119);
+        color: #ffffff;
+    }
+    .theme, .kurs, .subjectCount, .krBals, .totalGpa, .allGpa {
+        width: 340px;
+        padding: 8px;
+        position: relative;
+        background: #ffffff;
+        border: 1.1px solid navy;
+        transition: 0.8s ease;
+        label {
+            transition: 0.8s ease;
+            padding: 0 8px;
+        }
+    }
+    .theme.negative, .kurs.negative, .subjectCount.negative, .krBals.negative, .totalGpa.negative, .allGpa.negative {
+        background: black;
+        color: rgb(185, 0, 185);
+        border-color: rgb(185, 0, 185);
+        // text-shadow: 0 0 2px pink;
+        label, input, button, select, .ant-select-selector {
+            border-color: rgb(185, 0, 185);
+            color: rgb(185, 0, 185);
+            background: black;
+            // text-shadow: 0 0 2px pink;
+            &:hover::placeholder{
+                color: rgb(185, 0, 185);
+            }
+        }
+    }
+    .theme.light, .kurs.light, .subjectCount.light, .krBals.light, .totalGpa.light, .allGpa.light {
+        background: #ffffff;
+        color: navy;
+        border-color: navy;
+        label, input, button, select, .ant-select-selector {
+            border-color: navy;
+            color: navy;
+            background: white;
+            &:hover::placeholder{
+                color: navy;
+            }
+        }
+    }
+    .theme.forest, .kurs.forest, .subjectCount.forest, .krBals.forest, .totalGpa.forest, .allGpa.forest {
+        background: forestgreen;
+        color: lime;
+        border-color: lime;
+        label, input, button, select, .ant-select-selector {
+            border-color: lime;
+            color: lime;
+            background: forestgreen;
+            &:hover::placeholder{
+                color: lime;
+            }
+        }
+    }
+    .theme.navy, .kurs.navy, .subjectCount.navy, .krBals.navy, .totalGpa.navy, .allGpa.navy {
+        background: navy;
+        color: aqua;
+        border-color: aqua;
+        label, input, button, select, .ant-select-selector {
+            border-color: aqua;
+            color: aqua;
+            background: navy;
+            &:hover::placeholder{
+                color: aqua;
+            }
+        }
+    }
+    .theme.crimson, .kurs.crimson, .subjectCount.crimson, .krBals.crimson, .totalGpa.crimson, .allGpa.crimson {
+        background: crimson;
+        color: pink;
+        border-color: pink;
+        label, input, button, select, .ant-select-selector {
+            border-color: pink;
+            color: pink;
+            background: crimson;
+            &:hover::placeholder{
+                color: pink;
+            }
+        }
+    }
+    .allGpa{
+        justify-content: center;
+        flex-direction: column;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .krBals {
+        flex-direction: column;
+    }
+    .subjectCount {
+        display: flex;
+        align-items: center;
+    }
+    .subjectCount.false, .krBals.false, .totalGpa.false, .allGpaFoot.false, .allGpa.false, .allGpaForm.true, .kurs.false {
+        display: none;  
+    }
+    .subjectCount.true, .allGpa.true {
+        display: flex;
+    }
+    .totalGpa.true {
+        display: block;
+    }
+    .row, .bx {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        justify-content: center;
+        width: 100%;
+    }
+    .row input {
+        width: 155px;
+    }
+    .allGpaFoot.true {
+        display: block;
+    }
+}
