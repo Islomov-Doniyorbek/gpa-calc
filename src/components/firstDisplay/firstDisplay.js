@@ -22,6 +22,7 @@ const FirstDisplay = ({kurs, onChangeKurs, themeMode, isDisplay}) => {
               .includes(input.toLowerCase());
             }}
             options={[
+              { value: 0, label: 'kurs' },
               { value: 1, label: 'I' },
               { value: 2, label: 'II' },
               { value: 3, label: 'III' },
